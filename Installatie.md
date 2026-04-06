@@ -3,15 +3,6 @@ Download het script en plaats de map fs_stash in je resources map.
 
 Voer de SQL uit in je database (HeidiSQL, phpMyAdmin, etc.):
 
-SQL
-CREATE TABLE IF NOT EXISTS `player_stashes` (
-    `id` INT(11) NOT NULL AUTO_INCREMENT,
-    `owner` VARCHAR(100) NOT NULL,
-    `name` VARCHAR(100) NOT NULL,
-    `coords` LONGTEXT NOT NULL,
-    PRIMARY KEY (`id`)
-) ENGINE=InnoDB DEFAULT CHARSET=utf8mb4;
-
 Voeg het item toe aan je server. Ga naar ox_inventory/data/items.lua en voeg dit toe:
 
 Lua
@@ -20,7 +11,7 @@ Lua
     weight = 500,
     stack = false,
     close = true,
-    description = 'Een tablet om kluis-locaties te registreren en te verkopen.'
+    description = 'Een tablet om kluis-locaties te registreren.'
 },
 Voeg toe aan server.cfg:
 Zorg dat het script na alle OX-scripts start.
